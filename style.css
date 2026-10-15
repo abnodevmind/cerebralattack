@@ -1,0 +1,257 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(transparent, black);
+    pointer-events: none;
+}
+
+.banner {
+    width: 100%;
+    height: 50dvh;
+    object-fit: cover;
+    object-position: center 38%;
+    
+}
+
+.bandNameLogo {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    bottom: 0;
+    width: 40%;
+    filter: brightness(0) invert(1);
+    z-index: 1;
+}   
+
+.heroSpacer {
+    height: 10vw;
+    max-height: 150px;
+    min-height: 60px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    background-color: #080808;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 20px 30px;
+    border-right: 1px solid #292929;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.navbar a:first-child {
+    border-left: 1px solid #292929;
+}
+
+.navbar a:hover {
+    color: #ff3030;
+    background-color: #171717;
+}
+
+.announcement {
+    background-color: #101010;
+    color: white;
+
+    width: 80%;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+
+    text-align: center;
+    border: 1px solid #ff3030;
+    border-radius: 4px;
+}
+
+main section {
+    text-align: center;
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: "Bowlby One SC", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    width: 80%;
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.links a {
+    display: inline-block;
+    background-color: #080808;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 12px 20px;
+    border: 1px solid #292929;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.links a:hover {
+    color: #ff3030;
+    background-color: #171717;
+}
+
+
+
+
+
+.release {
+    display: flex;
+    gap: 20px;
+    width: 90%;
+    max-width: 750px;
+    margin: 25px auto;
+    padding: 18px;
+    background-color: #101010;
+    border: 1px solid #333;
+}
+
+.release-cover {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.release-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+}
+
+.release-type {
+    color: #ff3030;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 5px;
+}
+
+.release-info h2 {
+    font-family: "Bowlby One SC", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+
+.release-date,
+.release-length {
+    color: #aaa;
+    font-size: 13px;
+    margin: 3px 0;
+}
+
+.release-links {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+.release-links a {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    background-color: #1c1c1c;
+    border: 1px solid #444;
+    transition: border-color 0.2s,
+                background-color 0.2s;
+}
+
+.release-links a:hover {
+    background-color: #292929;
+    border-color: #ff3030;
+}
+
+.release-links img {
+    width: 17px;
+    height: 17px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+
+
+
+
+
+
+@media (max-width: 500px) {
+    .navbar a {
+        width: 25%;
+        padding: 15px 0;
+        text-align: center;
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+}
+
+
+
+@media (max-width: 400px) {
+    .release {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .release-cover {
+        width: 110px;
+        height: 110px;
+    }
+
+    .release-info h2 {
+        font-size: 18px;
+        overflow-wrap: anywhere;
+    }
+
+    .release-links {
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    .release-links a {
+        width: 29px;
+        height: 29px;
+    }
+}
