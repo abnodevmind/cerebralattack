@@ -336,7 +336,31 @@ h1, h2, h3 {
     letter-spacing: 1px;
 }
 
+.gallery-image {
+    width: 250px;
+    cursor: zoom-in;
+}
 
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: zoom-out;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.lightbox.active {
+    display: flex;
+}
 
 
 
